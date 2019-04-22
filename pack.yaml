@@ -1,0 +1,11 @@
+---
+ref: puppetdb
+name: puppetdb
+description: StackStorm integration pack for PuppetDB
+keywords: 
+    - puppetdb
+    - puppet
+    - db
+version: 0.1.0
+author: Encore Technologies
+email: code@encore.tech

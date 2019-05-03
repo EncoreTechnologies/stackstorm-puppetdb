@@ -1,0 +1,64 @@
+---
+description: "TODO"
+enabled: true
+runner_type: "python-script"
+entry_point: puppetdb_action.py
+name: factsets
+parameters:
+############################################################################
+# begin connection params
+  connection:
+    type: string
+    description: "Name of <connection> from this pack's configuration that specifies how to connect to a Men&Mice server."
+    required: false
+  server:
+    type: string
+    description: "Optional override of the Men&Mice server in <connection> (required if <connection> is not specified)."
+    required: false
+  port:
+    type: integer
+    description: "Optional override of the Men&Mice port in <connection>."
+    required: false
+  transport:
+    type: string
+    description: "Optional override of the Men&Mice transport in <connection>."
+    required: false
+    enum:
+      - http
+      - https
+  ssldir:
+    type: string
+    description: "Optional override of the directory where the SSL client certificates are stored to connect to PuppetDB"
+    required: false
+  certname:
+    type: string
+    description: "Optional override of the certname to use when building the SSL client certificate path"
+    required: false
+  ssl_verify:
+    type: boolean
+    description: "Verify SSL server certificates"
+    required: false
+############################################################################
+# begin query params
+  order_by:
+    type: string
+    required: false
+  limit:
+    type: integer
+    required: false
+  offset:
+    type: integer
+    required: false
+  include_total:
+    type: boolean
+    required: false
+############################################################################
+# begin invocation params
+  function:
+    type: string
+    default: factsets
+    immutable: true
+  method:
+    type: string
+    default: GET
+    immutable: true

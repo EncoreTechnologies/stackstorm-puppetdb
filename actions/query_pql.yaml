@@ -1,0 +1,28 @@
+---
+name: query_pql
+enabled: true
+description: >
+  Run a generic query on PuppetDB using PQL (Puppet Query Language)
+  Example:
+    query: 'nodes { certname = "stackstorm.domain.tld" }'
+runner_type: python-script
+entry_point: puppetdb_action.py
+parameters:
+  endpoint:
+    type: string
+    immutable: true
+    default: 'pql'
+  function:
+    type: string
+    immutable: true
+    default: null
+  method:
+    type: string
+    immutable: true
+    default: 'GET'
+  server:
+    required: true
+    type: string
+  query:
+    required: true
+    type: string

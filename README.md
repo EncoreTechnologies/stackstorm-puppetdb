@@ -1,5 +1,9 @@
 # puppetdb Integration Pack
 
+https://puppet.com/docs/puppetdb/5.1/api/index.html
+
+
+
 ## Configuration
 TODO: Describe configuration
 
